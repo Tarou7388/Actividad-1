@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="../CSS/ListarEstudiantes.css" />
+    <title>Listar Estudiantes</title>
+</head>
+
+<body>
+    <section class="content">
+        <table class="estudiantes-table" id="estudiantes-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Grado</th>
+                    <th>Seccion</th>
+                    <th>Cantidad de cursos</th>
+                    <th>Turno</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="Estudiantes">
+            </tbody>
+        </table>
+    </section>
+    <script src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/ListarEstudiantes.js"></script>
+</body>
+
+</html>

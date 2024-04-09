@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/AgregarEstudiante.css">
+    <title>Agregar Estudiante</title>
+</head>
+<body>
+    <h1>Agregar Estudiante</h1>
+    <form class="formulario" id="frmRegistro">
+        <label for="nombres">Nombres:</label><br>
+        <input type="text" id="nombres" name="nombres"><br>
+        
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos"><br>
+        
+        <label for="grado">Grado:</label><br>
+        <input type="text" id="grado" name="grado"><br>
+        
+        <label for="seccion">Sección:</label><br>
+        <input type="text" id="seccion" name="seccion"><br>
+        
+        <label for="canCursos">Cantidad de Cursos:</label><br>
+        <input type="number" id="canCursos" name="can_cursos"><br>
+        
+        <label for="turno">Turno (M/T):</label><br>
+        <Select id="turno">
+            <option selected disabled>Selecciona un Turno</option>
+            <option value="M">Mañana</option>
+            <option value="T">Tarde</option>
+            <option value="N">Noche</option>
+        </Select><br>
+        
+        <button type="button" id="enviar">Agregar</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/AgregarEstudiante.js"></script>
+</body>
+</html>
