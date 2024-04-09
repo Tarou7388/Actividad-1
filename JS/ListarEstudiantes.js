@@ -73,9 +73,37 @@ document.addEventListener("DOMContentLoaded", () => {
                         });
 
                     });
-                    const thBoton = document.createElement("td");
-                    thBoton.appendChild(botonEliminar);
-                    tr.appendChild(thBoton);
+                    const thBotonEliminar = document.createElement("td");
+                    thBotonEliminar.appendChild(botonEliminar);
+                    tr.appendChild(thBotonEliminar);
+
+                    const botonActualizar = document.createElement("button");
+                    botonActualizar.textContent = "actualizar";
+                    botonActualizar.id = "actualizar";
+                    botonActualizar.addEventListener("click", () => {
+                        const parametros = new FormData();
+                        parametros.append("operacion", "GuardarDatos");
+                        parametros.append("idEstudiante", element.id_estudiante)
+                        parametros.append("nombres", element.nombres)
+                        parametros.append("apellidos", element.apellidos)
+                        parametros.append("grado", element.grado)
+                        parametros.append("seccion", element.seccion)
+                        parametros.append("canCursos", element.can_cursos)
+                        parametros.append("turno", element.turno)
+                        fetch(`../Controllers/Estudiantes.controllers.php`, {
+                            method: "POST",
+                            body: parametros
+                        })
+                            .then(
+                                window.location.href = "../Views/ActualizarEstudiante.html"
+                            )
+                            .catch(e => {
+                                console.error(e);
+                            });
+                    });
+                    const thBotonActualizar = document.createElement("td");
+                    thBotonActualizar.appendChild(botonActualizar);
+                    tr.appendChild(thBotonActualizar);
 
                     tbody.appendChild(tr);
 

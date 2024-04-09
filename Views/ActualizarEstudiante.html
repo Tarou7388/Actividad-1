@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/ActualizarEstudiante.css" />
+    <title>Actualizar Estudiante</title>
+</head>
+
+<body>
+    <h1>Actualizar Estudiante</h1>
+    <section class="container">
+        <form id="frmActualizar">
+            <label for="idEstudiante">ID del Estudiante:</label><br>
+            <input type="number" id="idEstudiante" name="idEstudiante" required disabled><br><br>
+
+            <label for="nombres">Nombres:</label><br>
+            <input type="text" id="nombres" name="nombres" required><br><br>
+
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+            <label for="grado">Grado:</label><br>
+            <input type="text" id="grado" name="grado" maxlength="2" required><br><br>
+
+            <label for="seccion">Sección:</label><br>
+            <input type="text" id="seccion" name="seccion" maxlength="1" required><br><br>
+
+            <label for="canCursos">Cantidad de Cursos:</label><br>
+            <input type="number" id="canCursos" name="canCursos" min="0" required><br><br>
+
+            <label for="turno">Turno:</label><br>
+            <Select id="turno">
+                <option selected disabled>Selecciona un Turno</option>
+                <option value="M">Mañana</option>
+                <option value="T">Tarde</option>
+                <option value="N">Noche</option>
+            </Select><br>
+
+            <button type="button" id="enviar">Actualizar Estudiante</button>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/ActualizarEstudiante.js"></script>
+</body>
+</html>

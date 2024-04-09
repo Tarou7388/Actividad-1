@@ -56,5 +56,25 @@ class Estudiantes extends Conexion
         } catch (PDOException $e) {
             throw new Exception($e->getMessage());
         }
-    }   
+    }
+    public function ActualizarEstudiante($data = [])
+    {
+        try {
+            $consulta = $this->pdo->prepare("CALL spu_actualizar_estudiante(?,?,?,?,?,?,?)");
+            $consulta->execute(
+                array(
+                    $data['idEstudiante'],
+                    $data['nombres'],
+                    $data['apellidos'],
+                    $data['grado'],
+                    $data['seccion'],
+                    $data['canCursos'],
+                    $data['turno']
+                )
+            );
+            return $consulta->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }
