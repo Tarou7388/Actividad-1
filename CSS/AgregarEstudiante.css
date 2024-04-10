@@ -33,7 +33,7 @@ select {
 }
 button {
     width: 100%;
-    background-color: #007bff;
+    background-color: #454545;
     color: #fff;
     padding: 10px;
     border: none;
@@ -41,5 +41,5 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #242424;
 }

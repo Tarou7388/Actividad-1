@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     tr.appendChild(thBotonEliminar);
 
                     const botonActualizar = document.createElement("button");
-                    botonActualizar.textContent = "actualizar";
+                    botonActualizar.textContent = "Actualizar";
                     botonActualizar.id = "actualizar";
                     botonActualizar.addEventListener("click", () => {
                         const parametros = new FormData();

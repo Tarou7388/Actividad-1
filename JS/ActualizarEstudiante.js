@@ -42,7 +42,7 @@ function ActualizarEstudiante() {
         .then(respuesta => respuesta.json())
         .then(dato => {
             Swal.fire('¡Actualizacion exitosa!', '', 'success');
-            window.location.href = "../Views/Principal.html"
+            window.location.href = "../Views/ListarEstudiantes.html"
         })
         .catch(e => {
             console.error(e);
